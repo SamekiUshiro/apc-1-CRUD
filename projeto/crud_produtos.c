@@ -36,6 +36,22 @@ int main() {
             continue;
         }
         scanf("%d", &menu);
+        
+        switch (menu) {
+            case1:
+                break;
+            case2:
+                break;
+            case3:
+                break;
+            case4:
+                break;
+            case5:
+                printf("Saindo do sistema...\n");
+                break;
+            default:
+                printf("Opcao invalida! Tente novamente.\n");
+        }
     }
     
     
