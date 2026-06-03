@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main() {
     
@@ -17,7 +18,8 @@ int main() {
 
     // menu
 
-    while (menu != 5) {
+
+        system("clear");
         printf("\n========================================\n");
         printf("          SISTEMA DE PRODUTOS           \n");
         printf("========================================\n");
@@ -28,32 +30,36 @@ int main() {
         printf("5. Sair\n");
         printf("========================================\n");
         printf("Escolha uma opcao: ");
-
+  
         // Validação de entrada
-        if (scanf("%d", &menu) != 1) {
+        if (scanf("%d", &menu) >5) {
             printf("Entrada invalida! Digite um numero.\n");
             while(getchar() != '\n'); // Limpa o buffer
-            continue;
+
         }
-        scanf("%d", &menu);
         
-        switch (menu) {
-            case1:
-                break;
-            case2:
-                break;
-            case3:
-                break;
-            case4:
-                break;
-            case5:
-                printf("Saindo do sistema...\n");
-                break;
-            default:
-                printf("Opcao invalida! Tente novamente.\n");
-        }
-    }
-    
+        switch (menu)
+        {
+        case 1: system("clear");
+        printf("Vamos cadastrar o produto.");break;
+        case 2: system("clear");
+        printf("Listagem de produtos."); break;
+        case 3: system("clear"); 
+        printf("Atualização dos produtos.");break;
+        case 4: system("clear"); 
+        printf("Remoção de produtos."); break;
+        case 5: system("clear");
+        printf("Obrigado por usar o programa, adeus."); break;
+
+        
+        default: 
+        // do { 
+        printf("Opa opcao invalida tente novamente.\n");break;} 
+        //Tentei de alguma forma fazer o loop com a outra parte do codigo mas nao consegui
+    //     printf("Pressione ENTER para continuar...\n");  
+    //      getchar();
+    // }   while(menu !=0); break;
+        // }
     
 
 
