@@ -19,7 +19,7 @@ jobs:
 
       - name: Validar arquivos de código por pasta
         run: |
-          FOLDERS=$(find ./praticas -mindepth 1 -maxdepth 1 -type d)
+          FOLDERS=$(find ./projetos -mindepth 1 -maxdepth 1 -type d)
 
           for folder in $FOLDERS; do
             echo "Validando arquivos na pasta $folder..."
