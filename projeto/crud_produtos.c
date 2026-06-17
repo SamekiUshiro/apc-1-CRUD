@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <string.h>
+
 #include <stdlib.h>
-#include <string.h>
+
 
 int main() {
     
@@ -97,19 +97,23 @@ int id = 0;
 
     } }while (idDigitado <= 0 || idDuplicado == 1);
 produtos[quantidade].id = idDigitado;
-        
+   float preco = 0;     
         
         printf("Digite o nome do produto da mercearia que voce quer adicionar a sacola:\n ");
         scanf("%[^\n]s", produtos[quantidade].nome);
         while(getchar() != '\n');
+        
+        do{
         printf("Agora digite o preco do produto:");
-        scanf("%f", &produtos[quantidade].preco);
+        scanf("%f", &preco);
          while(getchar() != '\n'); 
          
-            if(produtos[quantidade].preco <0){
-        printf("Erro, preco nao pode ser negativo\n");
-        
-        }else  
+            if(preco <= 0){
+        printf("Erro: o preco deve ser um numero float positivo.\n");
+          
+        }else 
+        produtos[quantidade].preco = preco;
+    }while(preco <= 0);
    
         
            
@@ -122,8 +126,7 @@ produtos[quantidade].id = idDigitado;
              }
             }while(produtos[quantidade].preco < 0);
     
-        //     printf("Voce chegou no limite de produtos cadastrados, pressione ENTER para voltar ao menu principal.");
-        // getchar();
+        
             
         };break;
         case 2: system("clear");
